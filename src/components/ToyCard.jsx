@@ -1,15 +1,26 @@
 import React, { Component } from 'react';
 
+
+
 class ToyCard extends Component {
 
+
   render() {
-    return (
+    let { id, name, image, likes } = this.props.toy
+    let { appDeleteHandler, appLikeHandler } = this.props.cardCallbacks
+     return (
       <div className="card">
-        <h2>{'' /* Toy's Name */}</h2>
-        <img src={'' /* Toy's Image */} alt={/* Toy's Name */} className="toy-avatar" />
-        <p>{'' /* Toy's Likes */} Likes </p>
-        <button className="like-btn">Like {'<3'}</button>
-        <button className="del-btn">Donate to GoodWill</button>
+        <h2>{name}</h2>
+        <img src={image} alt={name} className="toy-avatar" />
+        <p>{likes} Likes </p>
+        <button 
+            className="like-btn"
+            onClick={() => appLikeHandler(id, likes+1)}
+        >Like {'<3'}</button>
+        <button 
+            className="del-btn"
+            onClick={() => appDeleteHandler(id)}
+        >Donate to GoodWill</button>
       </div>
     );
   }
