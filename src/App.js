@@ -49,7 +49,7 @@ class App extends React.Component{
       body: JSON.stringify(toy)
     })
     .then(resp => resp.json())
-    .then(toy => this.setState({toys: [...this.state.toys, toy]}), console.log(toy))
+    .then(toy => this.setState({toys: [...this.state.toys, toy]}))
   }
 
   likesHandler = (props) => {

@@ -9,7 +9,6 @@ class ToyCard extends Component {
 
   donateToy = (e) => {
     e.preventDefault()
-    console.log('hi')
     this.props.donateHandler(this.props.toy.id)
   }
 
