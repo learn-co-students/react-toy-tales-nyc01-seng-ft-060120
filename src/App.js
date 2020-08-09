@@ -70,6 +70,7 @@ clickLike = (id) => {
               likes: ((foundToy[0].likes) + 1)
             })
           })
+          
     fetch("http://localhost:3000/toys")
     .then(resp => resp.json())
     .then(data => this.setState({ toyArray: data}))
