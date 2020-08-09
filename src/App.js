@@ -59,7 +59,7 @@ class App extends React.Component{
 
 clickLike = (id) => {
   let foundToy = this.state.toyArray.filter(toy => toy.id === id)
-  // console.log(foundToy[0].likes)
+ 
     fetch(`http://localhost:3000/toys/${id}`, {
             method: "PATCH",
             headers: {
