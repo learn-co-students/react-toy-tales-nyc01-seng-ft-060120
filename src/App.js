@@ -5,13 +5,12 @@ import Header from './components/Header'
 import ToyForm from './components/ToyForm'
 import ToyContainer from './components/ToyContainer'
 
-import data from './data'
-
 
 class App extends React.Component{
 
   state = {
-    display: false
+    display: false,
+    toyData: []
   }
 
   handleClick = () => {
@@ -21,20 +20,42 @@ class App extends React.Component{
     })
   }
 
+  submitHandler = (obj) => {
+    fetch("http://localhost:3000/toys/", {
+      method: "POST",
+      headers: {
+        "accepts": "application/json",
+        "content-type": "application/json"
+      },
+      body: JSON.stringify({
+        name: obj.name,
+        image: obj.image,
+        likes: obj.likes
+      })
+    })
+    .then(response => response.json())
+    .then(obj => {
+      let toysArray = [...this.state.toyData, obj]
+      this.setState({
+        toyData: toysArray
+      })
+    })
+  }
+
   render(){
     return (
       <>
         <Header/>
         { this.state.display
             ?
-          <ToyForm/>
+          <ToyForm submitHandler={this.submitHandler}/>
             :
           null
         }
         <div className="buttonContainer">
           <button onClick={this.handleClick}> Add a Toy </button>
         </div>
-        <ToyContainer/>
+        <ToyContainer newToy={this.state.toyData}/>
       </>
     );
   }
