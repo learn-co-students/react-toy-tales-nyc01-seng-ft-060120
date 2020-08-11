@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Woody",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
-      "likes": 5
+      "likes": 7
     },
     {
       "id": 2,
@@ -47,6 +47,12 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": -2
+    },
+    {
+      "name": "Barbie",
+      "image": "https://i5.walmartimages.com/asr/7d78f7b3-ca97-4913-90f0-e7fdcee647a9_1.e129c70cb6f4ffc0c1f34328c9548e64.jpeg",
+      "likes": 0,
+      "id": 9
     }
   ]
 }
