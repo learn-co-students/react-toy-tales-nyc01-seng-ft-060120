@@ -16,3 +16,19 @@ After the ToyCard components are on the page, consider building out the function
 After you have the create functionality built out, consider building out the delete functionality. When you click on the `Donate to Goodwill` button, the ToyCard that you clicked on should be removed from the DOM as well as the backend.
 
 After that, consider building out the like functionality. Clicking on the button should increase the number of likes on the DOM as well as the backend.
+
+---------------------------------------------
+DELIVERABLES
+---------------------------------------------
+-- hook up the data from the 'db.json' file to your React components and render the ToyCards component on the page.
+
+-- build out the functionality for the ToyForm. Use the ideas of controlled form. The new ToyCard should render to page.
+
+- build out the delete functionality. When you click on the Donate to Goodwill button, the ToyCard that you clicked on should be removed from the DOM as well as the backend.
+
+- build out the like functionality. Clicking on the button should increase the number of likes on the DOM as well as the backend.
+
+
+
+Siegmeyer of Catarina
+https://images-na.ssl-images-amazon.com/images/I/81hbcexMmYL._AC_SX425_.jpg
